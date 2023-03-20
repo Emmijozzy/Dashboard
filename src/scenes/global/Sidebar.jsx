@@ -60,8 +60,9 @@ const Sidebar = () => {
           color: "#6870fa !important",
         },
       }}
+      onDoubleClick={() => setIsCollapsed(!isCollapsed)}
     >
-      <ProSidebar collapsed={isCollapsed}>
+      <ProSidebar collapsed={isCollapsed} >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -77,12 +78,7 @@ const Sidebar = () => {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px"
               >
-
-                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuOutlinedIcon />
-                </IconButton>
               </Box>
             )}
           </MenuItem>
@@ -96,13 +92,6 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Data
-            </Typography>
             <Item
               title="Manage Team"
               to="/team"
@@ -125,13 +114,6 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Pages
-            </Typography>
             <Item
               title="Profile Form"
               to="/form"
@@ -154,13 +136,6 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Charts
-            </Typography>
             <Item
               title="Bar Chart"
               to="/bar"
